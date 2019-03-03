@@ -95,6 +95,7 @@ checkBedTime(7)
 function double(number) {
   return number * 2
 }
+
 let four = double(2)
 console.log(four)
 
@@ -116,6 +117,47 @@ function nextEven(num) {
 }
 console.log(nextEven(1))
 console.log(nextEven(2))
+
+function addOne(num) {
+  return num + 1
+}
+console.log(addOne(123))
+
+let number42 = 42
+console.log(addOne(number42))
+
+let num = 7
+console.log(addOne(num))
+
+// принимает количество товаров и стоимость за один и возвращает результат
+function calcPrice(qty, itemPrice) {
+  return qty * itemPrice
+}
+console.log("calcPrice(10, 2): ", calcPrice(10, 2))
+
+// splitPrice() — принимает общую стоимость, количество человек и говорит, сколько с каждого
+function splitPrice(total, peopleNum) {
+  return total / peopleNum
+}
+console.log("splitPrice(100, 2)", splitPrice(100, 2))
+
+// makeDiff() — принимает 3 числа и к наименьшему прибавляет 1, среднее делает четным: а от большого отнимает меньшее + среднее. Описывает все шаги в консоли
+// Первая часть: найти минимальное и максимальные числа
+// Вторая — сделать вычисления
+function makeDiff(a, b, c) {
+  let min = Math.min(a, b, c)
+  let max = Math.max(a, b, c)
+  let median = (a + b + c - max - min)
+  let minPlusOne = addOne(min)
+  let evenMedian = nextEven(median)
+  let newMax = max - min + median
+  console.log("К наименьшему прибавляю 1: ", minPlusOne)
+  console.log("Среднее делаю четным: ", evenMedian)
+  console.log("От большого отнимает меньшее + среднее: ", newMax)
+}
+
+
+
 
 
 
