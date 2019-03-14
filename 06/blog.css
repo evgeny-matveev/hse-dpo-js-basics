@@ -97,8 +97,14 @@ body.is-night {
     width: 40px;
     height: 40px;
 
-    background-image: url(menu.svg);
-    background-size: cover;
+    background-color: black;
+
+    -webkit-mask-image: url(menu.svg);
+    mask-image: url(menu.svg);
+  }
+
+  .is-night .menu-btn {
+    background-color: white;
   }
 
   .is-active ul {
@@ -132,7 +138,8 @@ body.is-night {
   }
 
   .is-active .menu-btn {
-    background-image: url(close.svg);
+    -webkit-mask-image: url(close.svg);
+    mask-image: url(close.svg);
   }
 }
 
