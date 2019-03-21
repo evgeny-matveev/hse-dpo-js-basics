@@ -4,20 +4,24 @@
   <meta charset="utf-8">
   <title>Выбери свой цвет</title>
 </head>
+
 <body>
-  <button type="button" name="button">
+  <button>
     Поменять цвет
   </button>
 
   <script>
-    // 1. Найти кнопку в структуре документа и сохранить в переменной
-    let btn = document.querySelector('button')
-    function functionName() {
-      
+    let $btn = document.querySelector('button')
+    function changeBackgroundColor() {
+      let color =
+        `rgb(${generateRGBCode()}, ${generateRGBCode()}, ${generateRGBCode()})`
+      document.body.style.backgroundColor = color
     }
-    // 2. Написать функцию, которая меняет цвет у body
-    // 2.1 Найти в структуре документа элемент body и поменять у него цвет фона
-    // 3. Сделать так, чтобы по клику на кнопку запускалась функция
+    function generateRGBCode() {
+      return Math.floor(Math.random() * 255)
+    }
+    $btn.onclick = changeBackgroundColor
   </script>
 </body>
+
 </html>

@@ -1,0 +1,37 @@
+body {
+  display: flex;
+
+  height: 100vh;
+
+  justify-content: space-around;
+  align-items: center;
+}
+.rect {
+  width: 300px;
+  height: 200px;
+
+  cursor: pointer;
+  transition: all 800ms ease;
+
+  background-color: #ccc;
+}
+.rect.is-cube {
+  width: 200px;
+}
+.rect.is-circle {
+  border-radius: 50%;
+}
+.rect.is-animated {
+  animation: shrinkY 500ms ease infinite;
+}
+@keyframes shrinkY {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(1.0);
+  }
+  100% {
+    transform: scaleY(0.1);
+  }
+}
