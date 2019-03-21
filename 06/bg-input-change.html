@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <input type="text" value="" placeholder="Напишите цвет">
+    <button>Поменять цвет фона</button>
+
+    <script>
+      let $btn = document.querySelector('button')
+      $btn.onclick = changeBackgroundColor
+      function changeBackgroundColor() {
+        let color = document.querySelector('input').value
+        document.body.style.backgroundColor = color
+      }
+    </script>
+  </body>
+</html>
